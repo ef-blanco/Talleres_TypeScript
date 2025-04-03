@@ -1,25 +1,20 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const dataTvShows_js_1 = require("./dataTvShows.js");
-let tvShowsTbody = document.getElementById("tvShows");
-const avrgSeasonsElem = document.getElementById("avrgSeasons");
+import { dataTvShows } from './dataTvShows.js';
+var tvShowsTbody = document.getElementById("tvShows");
+var avrgSeasonsElem = document.getElementById("avrgSeasons");
 function renderTvShowsOnTable(tvShows) {
     console.log("Desplegando TV Shows");
-    tvShows.forEach((tvShow) => {
-        let trElement = document.createElement("tr");
-        trElement.innerHTML = `<th scope="row">${tvShow.pos}</th>
-                                <td>${tvShow.name}</td>
-                                <td>${tvShow.channel}</td>
-                                <td>${tvShow.seasons}</td>`;
+    tvShows.forEach(function (tvShow) {
+        var trElement = document.createElement("tr");
+        trElement.innerHTML = "<th scope=\"row\">".concat(tvShow.pos, "</th>\n                                <td class=\"nombreSerie\">").concat(tvShow.name, "</td>\n                                <td>").concat(tvShow.channel, "</td>\n                                <td>").concat(tvShow.seasons, "</td>");
         tvShowsTbody.appendChild(trElement);
     });
 }
-renderTvShowsOnTable(dataTvShows_js_1.dataTvShows);
+renderTvShowsOnTable(dataTvShows);
 function getAverageSeasons(tvShows) {
-    let totalSeasons = 0;
-    let totalShows = tvShows.length;
-    tvShows.forEach((tvShow) => totalSeasons += tvShow.seasons);
-    let resp = totalSeasons / totalShows;
+    var totalSeasons = 0;
+    var totalShows = tvShows.length;
+    tvShows.forEach(function (tvShow) { return totalSeasons += tvShow.seasons; });
+    var resp = totalSeasons / totalShows;
     return resp;
 }
-avrgSeasonsElem.innerHTML = `${getAverageSeasons(dataTvShows_js_1.dataTvShows)}`;
+avrgSeasonsElem.innerHTML = "".concat(getAverageSeasons(dataTvShows));

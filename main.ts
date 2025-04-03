@@ -10,7 +10,7 @@ function renderTvShowsOnTable(tvShows: TvShow[]):void
     tvShows.forEach((tvShow)=>{
         let trElement = document.createElement("tr");
         trElement.innerHTML =  `<th scope="row">${tvShow.pos}</th>
-                                <td>${tvShow.name}</td>
+                                <td class="nombreSerie">${tvShow.name}</td>
                                 <td>${tvShow.channel}</td>
                                 <td>${tvShow.seasons}</td>`;
     tvShowsTbody.appendChild(trElement);
