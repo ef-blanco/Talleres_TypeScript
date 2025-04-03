@@ -1,5 +1,5 @@
-import { TvShow } from "./tvShow";
-import { dataTvShows } from "./dataTvShows";
+import { TvShow } from './tvShow.js';
+import { dataTvShows } from './dataTvShows.js';
 
 let tvShowsTbody: HTMLElement = document.getElementById("tvShows")!;
 const avrgSeasonsElem: HTMLElement = document.getElementById("avrgSeasons")!;

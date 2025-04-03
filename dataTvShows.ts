@@ -1,4 +1,4 @@
-import { TvShow } from "./tvShow";
+import { TvShow } from './tvShow.js';
 
 export const dataTvShows =
 [
