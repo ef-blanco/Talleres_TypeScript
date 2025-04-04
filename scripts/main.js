@@ -5,7 +5,7 @@ function renderTvShowsOnTable(tvShows) {
     console.log("Desplegando TV Shows");
     tvShows.forEach(function (tvShow) {
         var trElement = document.createElement("tr");
-        trElement.innerHTML = "<th scope=\"row\">".concat(tvShow.pos, "</th>\n                                <td class=\"nombreSerie\">").concat(tvShow.name, "</td>\n                                <td>").concat(tvShow.channel, "</td>\n                                <td>").concat(tvShow.seasons, "</td>");
+        trElement.innerHTML = "<th scope=\"row\">".concat(tvShow.pos, "</th>\n                                <button type=\"button\" class=\"btn btn-link\">").concat(tvShow.name, "</button>\n                                <td>").concat(tvShow.channel, "</td>\n                                <td>").concat(tvShow.seasons, "</td>");
         tvShowsTbody.appendChild(trElement);
     });
 }
